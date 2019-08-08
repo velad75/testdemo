@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-dv4y
+  labels:
+    app: static-dv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: static-dv
+  template:
+    metadata:
+      labels:
+        app: static-dv
+    spec:
+      containers:
+      - name: static-dv3
+        image: pod/staticdv3-7696d97d6d-km8jk
+        ports:
+        - containerPort: 80
